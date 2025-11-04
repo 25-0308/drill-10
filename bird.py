@@ -31,21 +31,21 @@ class Bird:
         elif self.x < 50:
             self.dir = 1
             self.face_dir = 1
-            
+
 
     def draw(self):
         if self.face_dir == 1:
             if int(self.frame) < 5:
                 self.image.clip_composite_draw(int(self.frame) * 183, 325, 183, 163, 0, 'None',
-                                           self.x, self.y,22,34)
+                                           self.x, self.y,16,24)
             elif int(self.frame) >= 5:
                 self.image.clip_composite_draw((int(self.frame) -5)*183, 163, 183, 163, 0, 'None',
-                                               self.x, self.y, 22, 34)
+                                               self.x, self.y, 16, 24)
         else:
             if int(self.frame) < 5:
                 self.image.clip_composite_draw(int(self.frame) * 183, 325, 183, 163, 0, 'h',
-                                               self.x, self.y, 22, 34)
+                                               self.x, self.y, 16, 24)
             elif int(self.frame) >= 5:
                 self.image.clip_composite_draw((int(self.frame) - 5) * 183, 163, 183, 163, 0, 'h',
-                                               self.x, self.y, 22, 34)
+                                               self.x, self.y, 16, 24)
 
