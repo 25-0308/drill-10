@@ -31,6 +31,7 @@ class Bird:
         elif self.x < 50:
             self.dir = 1
             self.face_dir = 1
+            
 
     def draw(self):
         if self.face_dir == 1:
