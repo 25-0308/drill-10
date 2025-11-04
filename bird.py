@@ -7,7 +7,7 @@ TIME_PER_ACTION = 0.14
 ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
 FRAMES_PER_ACTION = 10
 
-PIXEL_PER_METER = (10.0 / 0.3)
+PIXEL_PER_METER = (10.0 / 0.2)
 RUN_SPEED_KMPH = 80.0
 RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
 RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
@@ -36,15 +36,15 @@ class Bird:
         if self.face_dir == 1:
             if int(self.frame) < 5:
                 self.image.clip_composite_draw(int(self.frame) * 183, 325, 183, 163, 0, 'None',
-                                           self.x, self.y,20,40)
+                                           self.x, self.y,22,34)
             elif int(self.frame) >= 5:
                 self.image.clip_composite_draw((int(self.frame) -5)*183, 163, 183, 163, 0, 'None',
-                                               self.x, self.y, 20, 40)
+                                               self.x, self.y, 22, 34)
         else:
             if int(self.frame) < 5:
                 self.image.clip_composite_draw(int(self.frame) * 183, 325, 183, 163, 0, 'h',
-                                               self.x, self.y, 20, 40)
+                                               self.x, self.y, 22, 34)
             elif int(self.frame) >= 5:
                 self.image.clip_composite_draw((int(self.frame) - 5) * 183, 163, 183, 163, 0, 'h',
-                                               self.x, self.y, 20, 40)
+                                               self.x, self.y, 22, 34)
 
